@@ -10,12 +10,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-fun alfabet{
-
-    var bukva:Char = 'a'
-  for  (bukva in 'a'..'z' step 2){println(bukva)}
-
-}
+fun alfabet{for(bukva in 'b'..'z' step 2){println(bukva)}}
 
 
 
