@@ -37,8 +37,6 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG,"5onDestroy()")
     }
 
-
-
 }
 
 
