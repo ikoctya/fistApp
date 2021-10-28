@@ -2,54 +2,79 @@ package ru.ikoctya.firstapp
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
 
 private const val TAG = "MainActivity"
 private const val MY_OWN_LOG_TAG = "MyOwnLog"
 private const val VALUE = "Value"
 
 class MainActivity : AppCompatActivity() {
-    val pushkin  = listOf(
-        "\r\n 111 Ты видел деву на скале \r\n В одежде белой над волнами\r\n",                 //0
-        "\r\n 222 Когда, бушуя в бурной мгле,\r\n Играло море с берегами\r\n",                 //1
-        "\r\n 333 Когда луч молний озарял \r\n Ее всечасно блеском алым\r\n",                 //2
-        "\r\n 444 И ветер бился и летал \r\n С ее летучим покрывалом?\r\n",                      //3
-        "\r\n 555 Прекрасно море в бурной мгле \r\n И небо в блесках без лазури;\r\n",    //4
-        "\r\n 666Но верь мне: дева на скале \r\n  Прекрасней волн, небес и бури.\r\n")        //5
+    private lateinit var helloTextView: TextView
+    private lateinit var randomizeButton: Button
+
+    val pushkin = listOf(
+        " \n Ты видел деву на скале \n В одежде белой над волнами\n",                 //0
+        " \n Когда, бушуя в бурной мгле,\n Играло море с берегами\n",                 //1
+        " \n Когда луч молний озарял \n Ее всечасно блеском алым\n",                 //2
+        " \n И ветер бился и летал \n С ее летучим покрывалом?\n",                      //3
+        " \n Прекрасно море в бурной мгле \n И небо в блесках без лазури;\n",    //4
+        " \n Но верь мне: дева на скале \n  Прекрасней волн, небес и бури.\n"
+    )        //5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(MY_OWN_LOG_TAG, pushkin[0])
         setContentView(R.layout.activity_main)
+
+        helloTextView = findViewById(R.id.textView2)
+        randomizeButton = findViewById(R.id.rand2)
+
+        if (savedInstanceState != null)
+            helloTextView.text = savedInstanceState.getString(VALUE)
+        else
+            randomize()
+
+        randomizeButton.setOnClickListener { randomize() }
+        Log.d(MY_OWN_LOG_TAG, pushkin[0])
+
     }
 
-    override fun onStart(){
-       super.onStart()
+    fun randomize() {
+        val randomValue = Random.nextInt(10000)
+        helloTextView.text = randomValue.toString()
+    }
+
+    override fun onStart() {
+        super.onStart()
         Log.d(MY_OWN_LOG_TAG, pushkin[1])
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d(MY_OWN_LOG_TAG,pushkin[2])
+        Log.d(MY_OWN_LOG_TAG, pushkin[2])
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d(MY_OWN_LOG_TAG,pushkin[3])
+        Log.d(MY_OWN_LOG_TAG, pushkin[3])
+
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d(MY_OWN_LOG_TAG,pushkin[4])
+        Log.d(MY_OWN_LOG_TAG, pushkin[4])
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(MY_OWN_LOG_TAG,pushkin[5])
+        Log.d(MY_OWN_LOG_TAG, pushkin[5])
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(VALUE, helloTextView.text.toString())
     }
 
 }
-
-
-
-
