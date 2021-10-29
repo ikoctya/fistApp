@@ -2,4 +2,6 @@
     <string name="firstApp">firstApp</string>
     <string name="hello_man">HELLO MAN</string>
     <string name="hello">HELLO</string>
+    <string name="next">NEXT</string>
+    <string name="secondactivity">SecondActivity</string>
 </resources>

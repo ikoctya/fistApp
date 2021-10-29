@@ -1,5 +1,6 @@
 package ru.ikoctya.firstapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -39,6 +40,9 @@ class MainActivity : AppCompatActivity() {
         randomizeButton.setOnClickListener { randomize() }
         Log.d(MY_OWN_LOG_TAG, pushkin[0])
 
+        val nextButton: Button = findViewById(R.id.nexxt_button)
+        val intent = Intent(this,SecondAvtivity::class.java)
+        nextButton.setOnClickListener { startActivity(intent) }
     }
 
     fun randomize() {
