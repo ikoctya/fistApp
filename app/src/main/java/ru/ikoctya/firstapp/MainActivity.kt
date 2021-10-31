@@ -11,19 +11,19 @@ import kotlin.random.Random
 private const val TAG = "MainActivity"
 private const val MY_OWN_LOG_TAG = "MyOwnLog"
 private const val VALUE = "Value"
+private const val KEY = "HELLO KEY"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var helloTextView: TextView
     private lateinit var randomizeButton: Button
 
     val pushkin = listOf(
-        " \n Ты видел деву на скале \n В одежде белой над волнами\n",                 //0
-        " \n Когда, бушуя в бурной мгле,\n Играло море с берегами\n",                 //1
-        " \n Когда луч молний озарял \n Ее всечасно блеском алым\n",                 //2
-        " \n И ветер бился и летал \n С ее летучим покрывалом?\n",                      //3
-        " \n Прекрасно море в бурной мгле \n И небо в блесках без лазури;\n",    //4
-        " \n Но верь мне: дева на скале \n  Прекрасней волн, небес и бури.\n"
-    )        //5
+        " \n Ты видел деву на скале \n В одежде белой над волнами\n",           //0
+        " \n Когда, бушуя в бурной мгле,\n Играло море с берегами\n",           //1
+        " \n Когда луч молний озарял \n Ее всечасно блеском алым\n",            //2
+        " \n И ветер бился и летал \n С ее летучим покрывалом?\n",              //3
+        " \n Прекрасно море в бурной мгле \n И небо в блесках без лазури;\n",   //4
+        " \n Но верь мне: дева на скале \n  Прекрасней волн, небес и бури.\n")  //5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +41,9 @@ class MainActivity : AppCompatActivity() {
         Log.d(MY_OWN_LOG_TAG, pushkin[0])
 
         val nextButton: Button = findViewById(R.id.nexxt_button)
-        val intent = Intent(this,SecondAvtivity::class.java)
+
+        val intent = Intent(this,SecondActivity::class.java)
+        intent.putExtra(KEY,"Hello from MainActivity")
         nextButton.setOnClickListener { startActivity(intent) }
     }
 
