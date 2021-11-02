@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.concurrent.thread
 import kotlin.random.Random
 
 private const val TAG = "MainActivity"
@@ -55,8 +56,7 @@ class MainActivity : AppCompatActivity() {
         intent.addCategory(Intent.CATEGORY_APP_BROWSER)
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         nextButton.setOnClickListener { this.startActivity(intent) }
-
-    }
+           }
 
         fun randomize() {
             val randomValue = Random.nextInt(10000)
@@ -94,6 +94,3 @@ class MainActivity : AppCompatActivity() {
             outState.putString(VALUE, helloTextView.text.toString())
         }
     }
-
-
-
