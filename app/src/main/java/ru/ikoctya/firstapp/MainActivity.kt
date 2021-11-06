@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
             showSnackBar(it)
         }
 
-
     }
 
     private fun showSnackBar(view: View) {
