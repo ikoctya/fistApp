@@ -14,7 +14,5 @@ class SecondActivity : AppCompatActivity() {
 
         val hello:String? = intent.extras?.getString(KEY)
         Toast.makeText(this, hello, LENGTH_LONG).show()
-
-
     }
 }

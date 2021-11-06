@@ -4,13 +4,13 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.concurrent.thread
 import kotlin.random.Random
+import com.google.android.material.snackbar.Snackbar
 
 private const val TAG = "MainActivity"
 private const val MY_OWN_LOG_TAG = "MyOwnLog"
@@ -56,41 +56,42 @@ class MainActivity : AppCompatActivity() {
         intent.addCategory(Intent.CATEGORY_APP_BROWSER)
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         nextButton.setOnClickListener { this.startActivity(intent) }
-           }
 
-        fun randomize() {
-            val randomValue = Random.nextInt(10000)
-            helloTextView.text = randomValue.toString()
+        val snackBut: Button = findViewById(R.id.snackButton)
+        snackBut.setOnClickListener {
+            showSnackBar(it)
         }
 
-        override fun onStart() {
-            super.onStart()
-            Log.d(MY_OWN_LOG_TAG, pushkin[1])
-        }
 
-        override fun onResume() {
-            super.onResume()
-            Log.d(MY_OWN_LOG_TAG, pushkin[2])
-        }
-
-        override fun onPause() {
-            super.onPause()
-            Log.d(MY_OWN_LOG_TAG, pushkin[3])
-
-        }
-
-        override fun onStop() {
-            super.onStop()
-            Log.d(MY_OWN_LOG_TAG, pushkin[4])
-        }
-
-        override fun onDestroy() {
-            super.onDestroy()
-            Log.d(MY_OWN_LOG_TAG, pushkin[5])
-        }
-
-        override fun onSaveInstanceState(outState: Bundle) {
-            super.onSaveInstanceState(outState)
-            outState.putString(VALUE, helloTextView.text.toString())
-        }
     }
+
+    private fun showSnackBar(view: View) {
+             Snackbar.make(this, view, "Snackbar показан", Snackbar.LENGTH_INDEFINITE)
+            .setAction("Action") { Toast.makeText(this, "TOAST1111", Toast.LENGTH_LONG).show() }.show()
+    }
+
+    fun randomize() {
+        val randomValue = Random.nextInt(10000)
+        helloTextView.text = randomValue.toString()
+    }
+
+    override fun onStart() {    super.onStart()
+        Log.d(MY_OWN_LOG_TAG, pushkin[1])    }
+
+    override fun onResume() {        super.onResume()
+        Log.d(MY_OWN_LOG_TAG, pushkin[2])    }
+
+    override fun onPause() {        super.onPause()
+        Log.d(MY_OWN_LOG_TAG, pushkin[3])    }
+
+    override fun onStop() {        super.onStop()
+        Log.d(MY_OWN_LOG_TAG, pushkin[4])   }
+
+    override fun onDestroy() {        super.onDestroy()
+        Log.d(MY_OWN_LOG_TAG, pushkin[5])    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(VALUE, helloTextView.text.toString())
+    }
+}

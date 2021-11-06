@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/drawable/circle_button.xml" value="0.21614583333333334" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/sdk/fistApp/app/src/main/res/layout/activity_second.xml" value="0.1" />
       </map>
     </option>

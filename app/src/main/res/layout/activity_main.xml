@@ -21,7 +21,7 @@
         android:id="@+id/nexxt_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
+        android:text="Start Web Browser"
 
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +45,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:background="@drawable/circle_button"
+        android:id="@+id/snackButton"
+        style="@style/Theme.AndroidSandBox.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SnackButton"
+        app:layout_constraintBottom_toTopOf="@+id/nexxt_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
