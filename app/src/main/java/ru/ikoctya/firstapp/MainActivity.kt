@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(Intent.ACTION_MAIN)
         intent.addCategory(Intent.CATEGORY_APP_BROWSER)
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         nextButton.setOnClickListener { this.startActivity(intent) }
 
         val snackBut: Button = findViewById(R.id.snackButton)
@@ -62,11 +63,23 @@ class MainActivity : AppCompatActivity() {
             showSnackBar(it)
         }
 
+        val razButton: Button = findViewById(R.id.raz)
+        val dvaButton: Button = findViewById(R.id.dva)
+        val triButton: Button = findViewById(R.id.tri)
+        val swOne: Switch = findViewById(R.id.sw1)
+        val swTwo: Switch = findViewById(R.id.sw2)
+        val swThree: Switch = findViewById(R.id.sw3)
+        razButton.setOnClickListener {  swOne.isChecked = swOne.isChecked==false   }
+        dvaButton.setOnClickListener {  swTwo.isChecked = swTwo.isChecked==false    }
+        triButton.setOnClickListener {  swThree.isChecked = swThree.isChecked==false }
     }
 
     private fun showSnackBar(view: View) {
              Snackbar.make(this, view, "Snackbar показан", Snackbar.LENGTH_INDEFINITE)
             .setAction("Action") { Toast.makeText(this, "TOAST1111", Toast.LENGTH_LONG).show() }.show()
+    }
+
+    fun switchRaz(view: View){
     }
 
     fun randomize() {
