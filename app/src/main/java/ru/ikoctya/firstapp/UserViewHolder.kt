@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-
-
     fun bind(userName: String){
         val userNameTextView:TextView=itemView.findViewById(R.id.usernameTextView)
         userNameTextView.text=userName

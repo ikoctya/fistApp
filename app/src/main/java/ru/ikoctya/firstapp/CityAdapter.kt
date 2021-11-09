@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class cityAdapter(private val cityList:List<City>): RecyclerView.Adapter<CityViewHolder>() {
+class CityAdapter(private val cityList:List<City>): RecyclerView.Adapter<CityViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CityViewHolder {
         val cityListItemView=
             LayoutInflater.from(parent.context)
