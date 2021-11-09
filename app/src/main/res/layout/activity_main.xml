@@ -17,19 +17,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
- />
+        app:layout_constraintTop_toTopOf="@id/sw2" />
 
     <Button
         android:id="@+id/nexxt_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Web Browser"
-
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Web Browser"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/dva"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+       />
 
     <Button
         android:id="@+id/rand2"
@@ -50,7 +49,8 @@
         android:text="BYE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rand2" />
 
 
     <Button
@@ -60,10 +60,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SnackButton"
-        app:layout_constraintBottom_toTopOf="@+id/nexxt_button"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/dva"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+       />
 
     <Button
         android:id="@+id/raz"
@@ -74,8 +75,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toStartOf="@+id/dva"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nexxt_button"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dva"
@@ -85,7 +85,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nexxt_button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tri"
@@ -95,7 +95,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dva"
-        app:layout_constraintTop_toBottomOf="@+id/nexxt_button" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
         android:id="@+id/sw1"
@@ -105,7 +105,7 @@
         app:layout_constraintBottom_toTopOf="@+id/rand2"
         app:layout_constraintEnd_toStartOf="@+id/sw2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/raz"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
@@ -116,8 +116,8 @@
         app:layout_constraintBottom_toTopOf="@+id/rand2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="UseSwitchCompatOrMaterialXml"        />
+        app:layout_constraintTop_toBottomOf="@+id/dva"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
         android:id="@+id/sw3"
@@ -127,8 +127,19 @@
         app:layout_constraintBottom_toTopOf="@+id/rand2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/sw2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tri"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        style="@style/Platform.MaterialComponents.Light"
+        android:id="@+id/gotoSecondActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2nd Activity"
+        app:layout_constraintBottom_toTopOf="@+id/snackButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

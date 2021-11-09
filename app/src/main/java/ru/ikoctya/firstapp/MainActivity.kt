@@ -49,9 +49,10 @@ class MainActivity : AppCompatActivity() {
         val nextButton: Button = findViewById(R.id.nexxt_button)
         val link = Uri.parse("https://glazovlife.ru")
 
-        //val intent = Intent(this, SecondActivity::class.java)
-        //val intent = Intent(Intent.ACTION_VIEW, link)
-        //intent.putExtra(KEY, "Hello from MainActivity")
+        val intentSecondActivity = Intent(this, SecondActivity::class.java)
+        val toSecActivity: Button = findViewById(R.id.gotoSecondActivity)
+        toSecActivity.setOnClickListener { this.startActivity(intentSecondActivity) }
+
 
         val intent = Intent(Intent.ACTION_MAIN)
         intent.addCategory(Intent.CATEGORY_APP_BROWSER)
