@@ -30,7 +30,7 @@ class SecondActivity : AppCompatActivity() {
             City("Екатеринбург", 1495066),
             City("Казань", 1257341),
             City("Нижний Новгород", 1244454)
-            )
+        )
 
         val userRecyclerView: RecyclerView = findViewById(R.id.usersRecycleView)
         userRecyclerView.layoutManager =
@@ -43,6 +43,6 @@ class SecondActivity : AppCompatActivity() {
         )
 //        userRecyclerView.adapter = UserAdapter(userNameList)
         //       userRecyclerView.adapter = CarAdapter(carList)
-        userRecyclerView.adapter = CityAd
+        userRecyclerView.adapter = CityAdapter(cityList)
     }
 }
