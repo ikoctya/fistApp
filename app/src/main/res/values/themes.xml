@@ -23,5 +23,11 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textColor">#C0CA33</item>
+        <item name="android:textViewStyle">@style/Theme.TextView</item>
+    </style>
+
+    <style name="Theme.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">20sp</item>
+
     </style>
 </resources>

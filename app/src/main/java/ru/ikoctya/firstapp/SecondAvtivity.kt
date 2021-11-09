@@ -1,9 +1,8 @@
 package ru.ikoctya.firstapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import android.widget.Toast.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,11 +13,20 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val userNameList:List<String> = listOf("Максим","Олег","Ольга","Елена","Андрей","Иван")
+        val userNameList: List<String> =
+            listOf("Максим", "Олег", "Ольга", "Елена", "Андрей", "Иван")
+        val carList: List<Car> = listOf(
+            Car("Audi", "red", 300),
+            Car("BMW", "blue", 350),
+            Car("Ferrari", "white", 450)
 
+        )
 
         val userRecyclerView: RecyclerView = findViewById(R.id.usersRecycleView)
-        userRecyclerView.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
-        userRecyclerView.adapter = UserAdapter(userNameList)
+        userRecyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        userRecyclerView.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
+//        userRecyclerView.adapter = UserAdapter(userNameList)
+        userRecyclerView.adapter = CarAdapter(carList)
     }
 }
