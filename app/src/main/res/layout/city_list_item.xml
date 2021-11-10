@@ -9,12 +9,15 @@
         android:id="@+id/name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp" />
+        android:layout_margin="5dp"
+        android:textColor="#FF9100"
+        android:textSize="30sp"/>
 
+<!-- тут было население, перенес в тост
     <TextView
         android:id="@+id/population_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp" />
-
+-->
 </LinearLayout>

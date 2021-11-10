@@ -35,12 +35,7 @@ class SecondActivity : AppCompatActivity() {
         val userRecyclerView: RecyclerView = findViewById(R.id.usersRecycleView)
         userRecyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        userRecyclerView.addItemDecoration(
-            DividerItemDecoration(
-                this,
-                DividerItemDecoration.VERTICAL
-            )
-        )
+        userRecyclerView.addItemDecoration( DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
 //        userRecyclerView.adapter = UserAdapter(userNameList)
         //       userRecyclerView.adapter = CarAdapter(carList)
         userRecyclerView.adapter = CityAdapter(cityList)
