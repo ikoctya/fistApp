@@ -14,3 +14,4 @@ class BannerViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
 
     }
 }
+//   itemView.context.getDrawable(banner.imageRes)
