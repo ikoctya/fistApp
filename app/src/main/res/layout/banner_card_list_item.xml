@@ -2,15 +2,33 @@
 
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="150dp"
+    android:layout_width="260dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="20dp">
 
     <ImageView
+        android:src="@drawable/androids"
+        android:scaleType="centerCrop"
         android:id="@+id/image_banner_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Three Androids"
 
         />
+
+    <TextView
+        android:id="@+id/description_text_view"
+        android:text="Hello my Friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textSize="26sp"
+        android:textColor="#FF6D00"
+        android:gravity="center"
+        />
+
 
 </com.google.android.material.card.MaterialCardView>
 

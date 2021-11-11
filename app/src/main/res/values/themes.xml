@@ -10,7 +10,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="materialButtonStyle">@style/Theme.AndroidSandBox.Button</item>
         <item name="android:switchStyle">@style/myFirstSwitches</item>
-        <item name="android:background">#A5D6A7</item>
+    <!--    <item name="android:background">#A5D6A7</item> -->
     </style>
     
     <style name="Theme.AndroidSandBox.Button" parent="Widget.MaterialComponents.Button">

@@ -108,3 +108,6 @@ class MainActivity : AppCompatActivity() {
         outState.putString(VALUE, helloTextView.text.toString())
     }
 }
+
+// Adapter натягивает view на RecyclerVire
+// ViewHolder натягивает данные на View
