@@ -53,9 +53,9 @@ class MainActivity : AppCompatActivity() {
         val toSecActivity: Button = findViewById(R.id.gotoSecondActivity)
         toSecActivity.setOnClickListener { this.startActivity(intentSecondActivity) }
 
-        val intentThirdActivity = Intent(this, SecondActivity::class.java)
+        val intentThirdActivity = Intent(this, ThirdActivity::class.java)
         val toThirdActivity: Button = findViewById(R.id.gotoThirdActivity)
-        toSecActivity.setOnClickListener { this.startActivity(intentThirdActivity) }
+        toThirdActivity.setOnClickListener { this.startActivity(intentThirdActivity) }
 
         val intent = Intent(Intent.ACTION_MAIN)
         intent.addCategory(Intent.CATEGORY_APP_BROWSER)
