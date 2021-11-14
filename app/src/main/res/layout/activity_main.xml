@@ -3,54 +3,41 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/myFirstSwitches"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    style="@style/myFirstSwitches"
-    >
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/randr_text"
+        android:layout_width="36dp"
+        android:layout_height="20dp"
+        android:text="@string/_0000"
+        app:layout_constraintBottom_toTopOf="@id/rand2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/sw2" />
+        app:layout_constraintTop_toBottomOf="@id/sw2" />
 
     <Button
         android:id="@+id/nexxt_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Web Browser"
         android:layout_margin="20dp"
+        android:text="@string/web_browser"
         app:layout_constraintBottom_toTopOf="@+id/dva"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/rand2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RANDOMIZE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/textView2"
         style="@style/myFirstSwitches"
-        />
-
-    <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BYE"
+        android:text="@string/randomize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rand2" />
+        app:layout_constraintTop_toBottomOf="@id/randr_text" />
 
 
     <Button
@@ -59,98 +46,119 @@
         style="@style/Theme.AndroidSandBox.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SnackButton"
         android:layout_marginEnd="10dp"
+        android:text="@string/snackbutton"
         app:layout_constraintBottom_toTopOf="@+id/dva"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/raz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:text="Раз"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:text="@string/raz_button"
+        app:layout_constraintBottom_toTopOf="@+id/sw2"
         app:layout_constraintEnd_toStartOf="@+id/dva"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/gotoThirdActivity" />
 
     <Button
         android:id="@+id/dva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="два"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:text="@string/dva_button"
+        app:layout_constraintBottom_toTopOf="@+id/sw2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/gotoThirdActivity" />
+
 
     <Button
         android:id="@+id/tri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="три"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:text="@string/tri_button"
+        app:layout_constraintBottom_toTopOf="@+id/sw2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dva"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/gotoThirdActivity" />
 
     <Switch
         android:id="@+id/sw1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/rand2"
+        android:text="@string/_1"
+        app:layout_constraintBottom_toTopOf="@+id/randr_text"
         app:layout_constraintEnd_toStartOf="@+id/sw2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raz"
+        app:layout_constraintTop_toBottomOf="@+id/dva"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
         android:id="@+id/sw2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/rand2"
+        android:text="@string/_2"
+        app:layout_constraintBottom_toTopOf="@+id/randr_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dva"
+
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
         android:id="@+id/sw3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3"
-        app:layout_constraintBottom_toTopOf="@+id/rand2"
+        android:text="@string/_3"
+        app:layout_constraintBottom_toTopOf="@+id/randr_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/sw2"
-        app:layout_constraintTop_toBottomOf="@+id/tri"
+        app:layout_constraintTop_toBottomOf="@+id/dva"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
-        style="@style/Platform.MaterialComponents.Light"
         android:id="@+id/gotoSecondActivity"
+        style="@style/Platform.MaterialComponents.Light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Самые населенные города РФ"
+        android:text="@string/topRussia"
         app:layout_constraintBottom_toTopOf="@+id/snackButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/gotoThirdActivity"
         style="@style/Platform.MaterialComponents.Light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Карточки"
-        app:layout_constraintBottom_toTopOf="@+id/raz"
+        android:text="@string/cards_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nexxt_button" />
+
+  <!--
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.fragment.app.FragmentContainerView>
+    -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

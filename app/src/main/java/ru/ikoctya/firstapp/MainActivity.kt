@@ -10,8 +10,8 @@ import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.random.Random
 import com.google.android.material.snackbar.Snackbar
+import kotlin.random.Random
 
 private const val TAG = "MainActivity"
 private const val MY_OWN_LOG_TAG = "MyOwnLog"
@@ -35,7 +35,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        helloTextView = findViewById(R.id.textView2)
+        val menuFragment = MenuFragment()
+      //  supportFragmentManager
+      //      .beginTransaction()
+      //      .add(R.id.fragment_container, menuFragment)
+      //      .commit()
+
+        helloTextView = findViewById(R.id.randr_text)
         randomizeButton = findViewById(R.id.rand2)
 
         if (savedInstanceState != null)
@@ -73,17 +79,18 @@ class MainActivity : AppCompatActivity() {
         val swOne: Switch = findViewById(R.id.sw1)
         val swTwo: Switch = findViewById(R.id.sw2)
         val swThree: Switch = findViewById(R.id.sw3)
-        razButton.setOnClickListener {  swOne.isChecked = swOne.isChecked==false   }
-        dvaButton.setOnClickListener {  swTwo.isChecked = swTwo.isChecked==false    }
-        triButton.setOnClickListener {  swThree.isChecked = swThree.isChecked==false }
+        razButton.setOnClickListener { swOne.isChecked = swOne.isChecked == false }
+        dvaButton.setOnClickListener { swTwo.isChecked = swTwo.isChecked == false }
+        triButton.setOnClickListener { swThree.isChecked = swThree.isChecked == false }
     }
 
     private fun showSnackBar(view: View) {
-             Snackbar.make(this, view, "Snackbar показан", Snackbar.LENGTH_INDEFINITE)
-            .setAction("Action") { Toast.makeText(this, "TOAST1111", Toast.LENGTH_LONG).show() }.show()
+        Snackbar.make(this, view, "Snackbar показан", Snackbar.LENGTH_INDEFINITE)
+            .setAction("Action") { Toast.makeText(this, "TOAST1111", Toast.LENGTH_LONG).show() }
+            .show()
     }
 
-    fun switchRaz(view: View){
+    fun switchRaz(view: View) {
     }
 
     fun randomize() {
@@ -91,20 +98,30 @@ class MainActivity : AppCompatActivity() {
         helloTextView.text = randomValue.toString()
     }
 
-    override fun onStart() {    super.onStart()
-        Log.d(MY_OWN_LOG_TAG, pushkin[1])    }
+    override fun onStart() {
+        super.onStart()
+        Log.d(MY_OWN_LOG_TAG, pushkin[1])
+    }
 
-    override fun onResume() {        super.onResume()
-        Log.d(MY_OWN_LOG_TAG, pushkin[2])    }
+    override fun onResume() {
+        super.onResume()
+        Log.d(MY_OWN_LOG_TAG, pushkin[2])
+    }
 
-    override fun onPause() {        super.onPause()
-        Log.d(MY_OWN_LOG_TAG, pushkin[3])    }
+    override fun onPause() {
+        super.onPause()
+        Log.d(MY_OWN_LOG_TAG, pushkin[3])
+    }
 
-    override fun onStop() {        super.onStop()
-        Log.d(MY_OWN_LOG_TAG, pushkin[4])   }
+    override fun onStop() {
+        super.onStop()
+        Log.d(MY_OWN_LOG_TAG, pushkin[4])
+    }
 
-    override fun onDestroy() {        super.onDestroy()
-        Log.d(MY_OWN_LOG_TAG, pushkin[5])    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(MY_OWN_LOG_TAG, pushkin[5])
+    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)

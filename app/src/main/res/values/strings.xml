@@ -5,4 +5,22 @@
     <string name="next">NEXT</string>
     <string name="secondactivity">SecondActivity</string>
     <string name="toast">Toast</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">About US</string>
+    <string name="about_info">Мы молодая компания</string>
+    <string name="back_button">Назад</string>
+    <string name="web_browser">Web Browser</string>
+    <string name="randomize">RANDOMIZE</string>
+    <string name="bye">BYE</string>
+    <string name="snackbutton">SnackButton</string>
+    <string name="dva_button">два</string>
+    <string name="tri_button">три</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="cards_button">Карточки</string>
+    <string name="topRussia">Самые населенные города РФ</string>
+    <string name="raz_button">Раз</string>
+    <string name="_0000">0000</string>
 </resources>

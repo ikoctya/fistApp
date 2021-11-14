@@ -4,16 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/activity_main2.xml" value="0.2046875" />
-        <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/activity_second.xml" value="0.1921875" />
-        <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/activity_third.xml" value="0.2" />
-        <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/banner_card_list_item.xml" value="0.67" />
+        <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/banner_card_list_item.xml" value="0.2046875" />
         <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/car_list_item.xml" value="0.18" />
         <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/city_list_item.xml" value="0.2046875" />
-        <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/human_list_item.xml" value="0.25" />
         <entry key="..\:/Users/ikoctya/AndroidStudioProjects/firstApp/app/src/main/res/layout/user_list_item.xml" value="0.22" />
-        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/sdk/fistApp/app/src/main/res/layout/activity_second.xml" value="0.1" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/activity_third.xml" value="0.2" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/banner_card_list_item.xml" value="0.2" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/city_list_item.xml" value="0.1743659420289855" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/fragment_about.xml" value="0.1859375" />
+        <entry key="..\:/sdk/fistApp/app/src/main/res/layout/fragment_menu.xml" value="0.2" />
       </map>
     </option>
   </component>
