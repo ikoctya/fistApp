@@ -19,10 +19,10 @@ class AboutFragment : Fragment() {
         backButton = view.findViewById(R.id.back_button)
         val  menuFragment=MenuFragment()
         backButton.setOnClickListener {
-       //     activity?.supportFragmentManager
-       //         ?.beginTransaction()
-      //          ?.replace(R.id.fragment_container,menuFragment)
-       //         ?.commit()
+            activity?.supportFragmentManager
+                ?.beginTransaction()
+                ?.replace(R.id.fragment_container,menuFragment)
+                ?.commit()
 
         }
 

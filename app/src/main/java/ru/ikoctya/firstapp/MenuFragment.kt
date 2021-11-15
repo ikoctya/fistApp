@@ -21,10 +21,10 @@ private lateinit var aboutButton:Button
         aboutButton = view.findViewById(R.id.about_button)
         val aboutFragment = AboutFragment()
         aboutButton.setOnClickListener{
-        //    activity?.supportFragmentManager
-        //        ?.beginTransaction()
-        //        ?.replace(R.id.fragment_container,aboutFragment)
-        //        ?.commit()
+            activity?.supportFragmentManager
+                ?.beginTransaction()
+                ?.replace(R.id.fragment_container,aboutFragment)
+                ?.commit()
         }
         return view
     }

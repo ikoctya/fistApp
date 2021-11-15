@@ -9,7 +9,7 @@ class BannerAdapter(private val bannerList: List<Banner>): RecyclerView.Adapter<
         var bannerView=LayoutInflater.from(parent.context)
             .inflate(R.layout.banner_card_list_item,parent,false)
         return BannerViewHolder(bannerView)
-    }
+            }
 
     override fun onBindViewHolder(holder: BannerViewHolder, position: Int) {
         val banner = bannerList[position]

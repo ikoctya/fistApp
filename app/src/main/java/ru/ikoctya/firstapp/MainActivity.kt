@@ -10,6 +10,10 @@ import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import kotlin.random.Random
 
@@ -17,10 +21,12 @@ private const val TAG = "MainActivity"
 private const val MY_OWN_LOG_TAG = "MyOwnLog"
 private const val VALUE = "Value"
 private const val KEY = "HELLO KEY"
+private const val LAST_SELECTED_ITEM="item"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var helloTextView: TextView
     private lateinit var randomizeButton: Button
+    private lateinit var bottomMenu: BottomNavigationView
 
     val pushkin = listOf(
         " \n Ты видел деву на скале \n В одежде белой над волнами\n",           //0
@@ -35,11 +41,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val menuFragment = MenuFragment()
-      //  supportFragmentManager
-      //      .beginTransaction()
-      //      .add(R.id.fragment_container, menuFragment)
-      //      .commit()
+        bottomMenu = findViewById(R.id.bottom_menu)
+        bottomMenu.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu -> {
+                    val menuFragment = MenuFragment()
+                    ReplaceFragment(menuFragment)
+                }
+                R.id.about -> {
+                    val aboutFragment = AboutFragment()
+                    ReplaceFragment(aboutFragment)
+                }
+            }
+            true
+        }
+
+        bottomMenu.selectedItemId= savedInstanceState?.getInt(
+            LAST_SELECTED_ITEM) ?: R.id.menu
+
 
         helloTextView = findViewById(R.id.randr_text)
         randomizeButton = findViewById(R.id.rand2)
@@ -90,6 +109,13 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
+    private fun ReplaceFragment(fragment: Fragment) {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
+    }
+
     fun switchRaz(view: View) {
     }
 
@@ -126,6 +152,8 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(VALUE, helloTextView.text.toString())
+        outState.putInt(LAST_SELECTED_ITEM,bottomMenu.selectedItemId)
+
     }
 }
 
